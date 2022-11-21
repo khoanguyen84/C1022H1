@@ -33,3 +33,9 @@ console.log(5 + 7 + '3' + 2 + 3);
 
 // template string || string iliteral
 
+console.log(Math.sqrt(9));
+console.log(Math.pow(5,3));
+console.log(5**3);
+
+
+// tenary operator ? :
