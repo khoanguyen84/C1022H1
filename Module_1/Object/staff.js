@@ -32,23 +32,23 @@ function displayStaff() {
     //         </tr>
     //     `;
     // }
-    // for (let staff of staffs) {
-    //     tbStaff += `
-    //         <tr>
-    //             <td>${staff.id}</td>
-    //             <td>${staff.name}</td>
-    //             <td>
-    //                 <img class='avatar' src="${staff.avatar}" />
-    //             </td>
-    //             <td>
-    //                 ${staff.gender ? "Male" : "Female"}
-    //             </td>
-    //             <td>${staff.dob}</td>
-    //             <td>${formatCurrency(staff.salary)}</td>
-    //         </tr>
-    //     `;
-    // }
-
+    for (let staff of staffs) {
+        tbStaff += `
+            <tr>
+                <td>${staff.id}</td>
+                <td>${staff.name}</td>
+                <td>
+                    <img class='avatar' src="${staff.avatar}" />
+                </td>
+                <td>
+                    ${staff.gender ? "Male" : "Female"}
+                </td>
+                <td>${staff.dob}</td>
+                <td>${formatCurrency(staff.salary)}</td>
+            </tr>
+        `;
+    }
+    
     // staffs.forEach(function (staff, index) {
     //     tbStaff += `
     //                 <tr>
@@ -65,25 +65,25 @@ function displayStaff() {
     //                 </tr>
     //             `;
     // })
-    // document.querySelector('#tbStaff').innerHTML = tbStaff;
-
-    let htmls = staffs.map(function(staff, index){
-        return `
-                <tr>
-                    <td>${staff.id}</td>
-                    <td>${staff.name}</td>
-                    <td>
-                        <img class='avatar' src="${staff.avatar}" />
-                    </td>
-                    <td>
-                        ${staff.gender ? "Male" : "Female"}
-                    </td>
-                    <td>${staff.dob}</td>
-                    <td>${formatCurrency(staff.salary)}</td>
-                </tr>
-            `;
-    })
-    document.getElementById("tbStaff").innerHTML = htmls.join("");
+    document.querySelector('#tbStaff').innerHTML = tbStaff;
+    
+    // let htmls = staffs.map(function(staff, index){
+    //     return `
+    //             <tr>
+    //                 <td>${staff.id}</td>
+    //                 <td>${staff.name}</td>
+    //                 <td>
+    //                     <img class='avatar' src="${staff.avatar}" />
+    //                 </td>
+    //                 <td>
+    //                     ${staff.gender ? "Male" : "Female"}
+    //                 </td>
+    //                 <td>${staff.dob}</td>
+    //                 <td>${formatCurrency(staff.salary)}</td>
+    //             </tr>
+    //         `;
+    // })
+    // document.getElementById("tbStaff").innerHTML = htmls.join("");
 }
 
 function formatCurrency(number) {
