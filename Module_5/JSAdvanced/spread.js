@@ -24,5 +24,33 @@ let obj_2 = {
     name: "Hà",
     email: "ha@gmail.com"
 }
-console.log(obj_1);
-console.log(obj_2);
+// console.log(obj_1);
+// console.log(obj_2);
+
+
+let khoa = {
+    fullname: "Khoa",
+    language: {
+        name: "English",
+        level: "B1"
+    }
+}
+
+let cuong = {
+    ...khoa,
+    fullname: "Cường"
+}
+// let cuong = JSON.parse(JSON.stringify(khoa))
+
+// let cuong = {
+//     ...khoa,
+//     fullname: "Cường",
+//     language: {
+//         ...khoa.language
+//     }
+// }
+
+cuong.language.level = "B2"
+
+console.log(khoa);
+console.log(cuong);
