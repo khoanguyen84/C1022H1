@@ -16,8 +16,8 @@ function useCallback(params) {
 
 useCallback(callback)
 useCallback(callback_2)
-useCallback(function(n1, n2){
-    return n1/n2;
+useCallback(function (n1, n2) {
+    return n1 / n2;
 })
 
 // function useCallback_2() {
