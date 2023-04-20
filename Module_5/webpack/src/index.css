@@ -1,0 +1,19 @@
+.container{
+    max-width: 900px;
+    margin: 0px auto;
+    background-color: gray;
+}
+
+.heading_1{
+    background-color: green;
+    color: white;
+}
+
+.paragraph{
+    background-color: yellow;
+    color: orange;
+}
+
+.img{
+    width: 100px;
+}
