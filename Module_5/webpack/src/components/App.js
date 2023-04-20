@@ -1,13 +1,19 @@
 import React from "react";
 import Paragraph from "./Paragraph";
+import Menu from './Menu';
 
-function App(){
+function App() {
     // JSX
     return (
         <div className="container">
-            <h1>Hello Anh Em!</h1>
-            <h2>CodeGym Huế</h2>
-            <Paragraph/>
+            <div>
+                <Menu />
+            </div>
+            <div>
+                <h1>Hello Anh Em!</h1>
+                <h2>CodeGym Huế</h2>
+                <Paragraph />
+            </div>
         </div>
     )
 }
