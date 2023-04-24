@@ -10,8 +10,11 @@ import React, { useState } from "react";
 // các thức hoạt động
 // + Lần đầu tiên state = initState
 // + Sử dụng setState để cập lại trạng thái (giá trị) của state
+//      - Cách 1: thay đôi trực tiếp
+//      - Cách 2: sử dụng callback
 
 // Cơ chế: Mỗi khi state thay đổi thì component sẽ được re-render
+// Nếu có nhiều hơn 1 state được thay đổi trong 1 sự kiện nào đó, thì component chỉ re-render 1 lần
 
 // function UseState(){
 //     console.log(`re-render`);
@@ -27,14 +30,18 @@ import React, { useState } from "react";
 //     )
 // }
 
-console.log('init');
 function UseState(){
     const [number, setNumber] = useState(0);
-    console.log(`re-render ${number}`);
+    const handleIncreament = () => {
+        setNumber((prev) => prev + 1)
+        setNumber((prev) =>  prev + 1)
+        setNumber((prev) =>  prev + 1)
+    }
+    console.log('re-render');
     return (
         <div className="container">
             <h1>{number}</h1>
-            <button onClick={() => setNumber(number + 1)}>Increment</button>
+            <button onClick={handleIncreament}>Increment</button>
         </div>
     )
 }
